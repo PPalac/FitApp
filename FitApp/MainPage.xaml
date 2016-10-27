@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="FitApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FitApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Margin="0,-27,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/19901-NSCARP.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <StackPanel Margin="229,345,42,117" Orientation="Vertical">
+            <TextBlock x:Name="bialko" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="28" Width="89" />
+            <AppBarSeparator Opacity="0" Height="20"></AppBarSeparator>
+            <TextBlock x:Name="wegle" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="28" Width="89" />
+            <AppBarSeparator Opacity="0" Height="20"></AppBarSeparator>
+            <TextBlock x:Name="fat" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="28" Width="89" />
+            <AppBarSeparator Opacity="0" Height="20"></AppBarSeparator>
+            <TextBlock x:Name="cal" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="31" Width="89" />
+
+        </StackPanel>
+        <StackPanel Margin="55,345,216,127" Orientation="Vertical">
+            <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Bialko" VerticalAlignment="Top" Height="28" Width="89"/>
+            <AppBarSeparator Opacity="0" Margin="0,0,27,0" Height="20"/>
+            <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Weglowodany" VerticalAlignment="Top" Height="28" Width="89"/>
+            <AppBarSeparator Opacity="0" Margin="0,0,27,0" Height="20"/>
+            <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Tluszcze" VerticalAlignment="Top" Height="28" Width="89"/>
+            <AppBarSeparator Opacity="0" Margin="0,0,27,0" Height="20"/>
+            <TextBlock x:Name="textBlock1_Copy3" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Kalorie" VerticalAlignment="Top" Height="28" Width="89"/>
+
+
+        </StackPanel>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="20" Text="W sumie dzisiaj:" VerticalAlignment="Top" Margin="10,284,0,0" Width="331" TextAlignment="Center" Height="36"/>
+        <StackPanel Margin="55,32,207,440" Orientation="Vertical">
+            <TextBlock x:Name="textBlock1_Copy4" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Bialko" VerticalAlignment="Top" Height="28" Width="89"/>
+            <AppBarSeparator Opacity="0" Margin="0,0,27,0" Height="20"/>
+            <TextBlock x:Name="textBlock1_Copy5" TextWrapping="Wrap" Text="Weglowodany" VerticalAlignment="Top" Height="28" Margin="0,0,-2,0"/>
+            <AppBarSeparator Opacity="0" Margin="0,0,27,0" Height="20"/>
+            <TextBlock x:Name="textBlock1_Copy6" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Tluszcze" VerticalAlignment="Top" Height="28" Width="89"/>
+
+
+
+        </StackPanel>
+        <Button x:Name="add" Content="Dodaj" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="142,197,153,0"/>
+        <StackPanel Margin="222,22,67,458" Orientation="Vertical">
+            <TextBox x:Name="bialkoIn" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+            <AppBarSeparator Opacity="0" Margin="0,0,27,0" Height="20"/>
+            <TextBox x:Name="wegleIn" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+            <AppBarSeparator Opacity="0" Margin="0,0,27,0" Height="20"/>
+            <TextBox x:Name="fatIn" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+
+
+        </StackPanel>
+
+
+    </Grid>
+</Page>
