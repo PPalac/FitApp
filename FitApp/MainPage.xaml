@@ -7,7 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Margin="0,-27,0,0">
+
+    <Grid Margin="0,-27,0,-1" Width="360" Height="668">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="0*"/>
@@ -15,49 +16,94 @@
         <Grid.Background>
             <ImageBrush ImageSource="Assets/19901-NSCARP.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
-        <StackPanel Margin="229,345,42,117" Orientation="Vertical">
-            <TextBlock x:Name="bialko" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="28" Width="89" />
+        <StackPanel Margin="270,344,0,118" Orientation="Vertical" HorizontalAlignment="Left">
+            <TextBlock x:Name="bialko" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="28" Width="89" />
             <AppBarSeparator Opacity="0" Height="20"></AppBarSeparator>
-            <TextBlock x:Name="wegle" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="28" Width="89" />
+            <TextBlock x:Name="wegle" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="28" Width="89" />
             <AppBarSeparator Opacity="0" Height="20"></AppBarSeparator>
-            <TextBlock x:Name="fat" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="28" Width="89" />
+            <TextBlock x:Name="fat" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="28" Width="89" />
             <AppBarSeparator Opacity="0" Height="20"></AppBarSeparator>
-            <TextBlock x:Name="cal" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="31" Width="89" />
+            <TextBlock x:Name="cal" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="31" Width="89" />
 
         </StackPanel>
-        <StackPanel Margin="55,345,216,127" Orientation="Vertical">
-            <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Bialko" VerticalAlignment="Top" Height="28" Width="89"/>
+        <StackPanel Margin="11,345,211,127" Orientation="Vertical">
+            <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="89" >
+                <Run Text="Bialko"/>
+                <Run Text=" [g]"/>
+                <LineBreak/>
+                <Run/>
+            </TextBlock>
             <AppBarSeparator Opacity="0" Margin="0,0,27,0" Height="20"/>
-            <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Weglowodany" VerticalAlignment="Top" Height="28" Width="89"/>
+            <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="131">
+                <Run Text="Weglowodany"/>
+                <Run Text=" "/>
+                <Run Text="[g]"/>
+            </TextBlock>
             <AppBarSeparator Opacity="0" Margin="0,0,27,0" Height="20"/>
-            <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Tluszcze" VerticalAlignment="Top" Height="28" Width="89"/>
+            <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="89">
+                <Run Text="Tluszcz"/>
+                <Run Text="e [g]"/>
+            </TextBlock>
             <AppBarSeparator Opacity="0" Margin="0,0,27,0" Height="20"/>
-            <TextBlock x:Name="textBlock1_Copy3" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Kalorie" VerticalAlignment="Top" Height="28" Width="89"/>
+            <TextBlock x:Name="textBlock1_Copy3" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="89">
+                <Run Text="Kalorie"/>
+                <Run Text=" [kcal]"/>
+            </TextBlock>
 
 
         </StackPanel>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="20" Text="W sumie dzisiaj:" VerticalAlignment="Top" Margin="10,284,0,0" Width="331" TextAlignment="Center" Height="36"/>
-        <StackPanel Margin="55,32,207,440" Orientation="Vertical">
+        <StackPanel x:Name="Income" Margin="55,32,207,440" Orientation="Vertical">
             <TextBlock x:Name="textBlock1_Copy4" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Bialko" VerticalAlignment="Top" Height="28" Width="89"/>
             <AppBarSeparator Opacity="0" Margin="0,0,27,0" Height="20"/>
             <TextBlock x:Name="textBlock1_Copy5" TextWrapping="Wrap" Text="Weglowodany" VerticalAlignment="Top" Height="28" Margin="0,0,-2,0"/>
             <AppBarSeparator Opacity="0" Margin="0,0,27,0" Height="20"/>
             <TextBlock x:Name="textBlock1_Copy6" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Tluszcze" VerticalAlignment="Top" Height="28" Width="89"/>
+            <AppBarSeparator Opacity="0" Margin="0,0,27,0" Height="20"/>
+            <TextBlock x:Name="textBlock1_Copy7" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Kalorie" VerticalAlignment="Top" Height="28" Width="89"/>
 
+
+
+        </StackPanel >
+        <Button x:Name="add" Content="Dodaj" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="142,230,153,0" Click="add_Click"/>
+        <StackPanel x:Name="Income1" Margin="222,20,67,458" Orientation="Vertical" HorizontalAlignment="Left">
+            <TextBox x:Name="bialkoIn" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" InputScope="Digits" PlaceholderText="0"/>
+            <AppBarSeparator Opacity="0" Margin="0,0,27,0" Height="20"/>
+            <TextBox x:Name="wegleIn" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" InputScope="Digits" PlaceholderText="0"/>
+            <AppBarSeparator Opacity="0" Margin="0,0,27,0" Height="20"/>
+            <TextBox x:Name="fatIn" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" InputScope="Digits" PlaceholderText="0"/>
+            <AppBarSeparator Opacity="0" Margin="0,0,27,0" Height="20"/>
+            <TextBox x:Name="calIn" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" InputScope="Digits" PlaceholderText="0"/>
 
 
         </StackPanel>
-        <Button x:Name="add" Content="Dodaj" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="142,197,153,0"/>
-        <StackPanel Margin="222,22,67,458" Orientation="Vertical">
-            <TextBox x:Name="bialkoIn" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-            <AppBarSeparator Opacity="0" Margin="0,0,27,0" Height="20"/>
-            <TextBox x:Name="wegleIn" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-            <AppBarSeparator Opacity="0" Margin="0,0,27,0" Height="20"/>
-            <TextBox x:Name="fatIn" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-
+        <StackPanel Margin="160,344,0,120" Orientation="Vertical" HorizontalAlignment="Left">
+            <TextBlock x:Name="bialko1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="28" Width="89" >
+           
+            </TextBlock>
+            <AppBarSeparator Opacity="0" Height="20"/>
+            <TextBlock x:Name="wegle1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="28" Width="89" />
+            <AppBarSeparator Opacity="0" Height="20"/>
+            <TextBlock x:Name="fat1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="28" Width="89" >
+            
+            </TextBlock>
+            <AppBarSeparator Opacity="0" Height="20"/>
+            <TextBlock x:Name="cal1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="31" Width="89" />
 
         </StackPanel>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Limit:" VerticalAlignment="Top" Margin="277,316,0,0"/>
 
 
     </Grid>
+    <Page.BottomAppBar>
+        <CommandBar ClosedDisplayMode ="Minimal" >
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton Name ="setUp" Icon="Setting" Label="Ustaw" Click="setUp_Click"/>
+            <AppBarSeparator></AppBarSeparator>
+            <AppBarButton Name="reset" Icon="Redo" Label="Resetuj" Click="reset_Click"/>
+
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>
